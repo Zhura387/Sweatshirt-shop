@@ -1,0 +1,76 @@
+.bacSave {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.save {
+  position: absolute;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 400px;
+
+  background-color: #ffffff;
+  box-shadow: -10px 4px 24px;
+  right: 0;
+}
+
+.saveHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.saveHead h2 {
+  font-size: 35px;
+  margin-left: 20px;
+}
+
+.saveBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.saveItem {
+  width: 320px;
+  height: 100%;
+  border: #465367 solid;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  margin: 5px;
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.total button {
+  background-color: #F93CC4;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+  color: black;
+}
+
+.total button:hover {
+  border: 3px solid #260635;
+  color: black;
+}

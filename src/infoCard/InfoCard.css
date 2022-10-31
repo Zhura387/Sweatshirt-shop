@@ -1,0 +1,14 @@
+.infoCard {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.cardIn {
+    display: flex;
+    align-items: center;
+}
+
+.cardIn img {
+    padding-right: 10px;
+}

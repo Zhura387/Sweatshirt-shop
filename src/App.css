@@ -1,0 +1,27 @@
+body{
+  margin: 0%;
+  background: linear-gradient(90.74deg, #F86666 0.61%, #B868F7 99.35%);
+
+}
+
+button{
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.cardName{
+  display: flex;
+  justify-content: space-around;
+  font-size: 36px;
+}
+.cardName a{
+  color: #230d35;
+}
+
+.kat{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Wrapp{
+  margin-left: 40px;
+}

@@ -1,0 +1,39 @@
+.slider {
+    width: 300px;
+    height: 300px;
+    margin: 20px 0px 0px 50px;
+}
+
+.ant-carousel .slick-dots li {
+    background-color: black;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px 0px 50px;
+    height: 800px;
+}
+
+.contentStart {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentText {
+    width: 400px;
+    font-size: 30px;
+}
+
+.contentTitle {
+    margin: 0px 0px 0px 0px;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.contentEnd {
+    height: 900px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}

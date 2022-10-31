@@ -1,0 +1,30 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  height: 140px;
+  font-size: 15px;
+  align-items: center;
+  font-size: 30px;
+}
+
+.ItemLeft {
+  display: flex;
+  margin-left: 40px;
+}
+
+.ItemLeft span {
+  padding-left: 20px;
+}
+
+.ItemRight {
+  display: flex;
+  margin-right: 40px;
+}
+
+.ItemRight span {
+  padding-left: 20px;
+}
+
+li {
+  list-style-type: none;
+}
