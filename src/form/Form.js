@@ -10,7 +10,7 @@ const Form = () => {
     const [message, setMessage] = React.useState("");
     const [checked, setChecked] = React.useState(true);
 
-    const hendelSub = (e) => {
+    const handelSub = (e) => {
         e.preventDefault();
         if (checked) {
             postForm()
@@ -63,7 +63,7 @@ const Form = () => {
                     </div>
                 </div>
                 <div className='btnForm'>
-                    <button onClick={(e) => hendelSub(e)}><svg width="44" height="25" viewBox="0 0 44 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button onClick={(e) => handelSub(e)}><svg width="44" height="25" viewBox="0 0 44 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M43.8735 12.5L23.8735 0.952994V24.047L43.8735 12.5ZM0.877441 14.5H25.8735V10.5H0.877441V14.5Z" fill="white" />
                     </svg>
                     </button>

@@ -2,6 +2,32 @@ import './modal.css';
 import React, { } from 'react';
 
 const Modal = ({ items, modalClouse }) => {
+    const [mail, setMail] = React.useState("");
+    const [phone, setPhone] = React.useState("");
+
+    const prod = items.map((item) => item)
+
+    const handleClick = () => {
+        postForm(prod)
+    }
+
+    const postForm = async (prod) => {
+        const res = await fetch('https://6312695bb466aa9b0389c80a.mockapi.io/order',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "mail": mail,
+                    "phone": phone,
+                    'product': prod,
+                }),
+            }
+        )
+        const data = await res.json()
+        console.log(data)
+    }
 
     return (
         <div className='conteinerModal'>
@@ -25,10 +51,19 @@ const Modal = ({ items, modalClouse }) => {
                     ))}
                 </div>
                 <div className='modalFooter'>
-                    <span>подтвердите заказ и Вам наберут</span>
-                    <button>
-                        <span className='btnModal'>ok</span>
-                    </button>
+                    <div className='formPlace'>
+                        <div>
+                            <span>Подтвердите заказ и с Вами свяжутся</span>
+                        </div>
+                        <form className='formModal'>
+                            <div className='inputModal'>
+                                <input type="email" placeholder="Введите E-mail" name="mail" id="mail" value={mail} onChange={(e) => setMail(e.target.value)}></input>
+                                <input type="tel" placeholder="Введите телефон" name="phone" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)}></input>
+                            </div>
+                            <button onClick={() => handleClick()} className='btnModal'>Подтвердить
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
