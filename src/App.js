@@ -34,94 +34,96 @@ function App() {
   }
 
   return (
-    <div className="Wrapp">
-      {saveOpened && <Save
-        items={itemsCard}
-        handleDelete={handleDelete}
-        onClose={() => setSaveOpened(false)} />}
+    <>
+      <div className="Wrapp">
+        {saveOpened && <Save
+          items={itemsCard}
+          handleDelete={handleDelete}
+          onClose={() => setSaveOpened(false)} />}
 
-      <Head onClickSave={() => setSaveOpened(true)}
-        items={itemsCard}
-      />
+        <Head onClickSave={() => setSaveOpened(true)}
+          items={itemsCard}
+        />
 
-      <Content />
+        <Content />
 
-      <h2>Почему мы лучшие
-        в Минске </h2>
+        <h2>Почему мы лучшие
+          в Минске </h2>
 
-      <InfoCard />
+        <InfoCard />
 
-      <h2>Каталог sweatshirt </h2>
+        <h2>Каталог sweatshirt </h2>
 
-      <div className='cards'>
-        <div className='cardName'>
-          <span><Link to="/">Все</Link></span>
-          <span> <Link to="/nike">Nike</Link></span>
-          <span> <Link to="/StoneIsland">Stone Island</Link></span>
-          <span> <Link to="/Adidas">Adidas</Link></span>
-          <span> <Link to="/Carhartt">Carhartt</Link></span>
-        </div>
-        <div className='kat'>
-          <Routes>
-            <Route path='/' element={items.map((item) => (
-              <Card
-                id={item.id}
-                name={item.name}
-                imageUrl={item.imageUrl}
-                model={item.model}
-                size={item.size}
-                price={item.price}
-                nul={item.nul}
-                addCard={(obj) => onAddCart(obj)} />))} />
+        <div className='cards'>
+          <div className='cardName'>
+            <span><Link to="/">Все</Link></span>
+            <span> <Link to="/nike">Nike</Link></span>
+            <span> <Link to="/StoneIsland">Stone Island</Link></span>
+            <span> <Link to="/Adidas">Adidas</Link></span>
+            <span> <Link to="/Carhartt">Carhartt</Link></span>
+          </div>
+          <div className='kat'>
+            <Routes>
+              <Route path='/' element={items.map((item) => (
+                <Card
+                  id={item.id}
+                  name={item.name}
+                  imageUrl={item.imageUrl}
+                  model={item.model}
+                  size={item.size}
+                  price={item.price}
+                  nul={item.nul}
+                  addCard={(obj) => onAddCart(obj)} />))} />
 
-            <Route path='/nike' element={items.filter(i => i.name === 'Nike').map((item) => (
-              <Card
-                id={item.id}
-                name={item.name}
-                imageUrl={item.imageUrl}
-                model={item.model}
-                size={item.size}
-                price={item.price}
-                nul={item.nul}
-                addCard={(obj) => onAddCart(obj)} />))} />
-            <Route path='/StoneIsland' element={items.filter(i => i.name === 'Stone Island').map((item) => (
-              <Card
-                id={item.id}
-                name={item.name}
-                imageUrl={item.imageUrl}
-                model={item.model}
-                size={item.size}
-                price={item.price}
-                nul={item.nul}
-                addCard={(obj) => onAddCart(obj)} />))} />
+              <Route path='/nike' element={items.filter(i => i.name === 'Nike').map((item) => (
+                <Card
+                  id={item.id}
+                  name={item.name}
+                  imageUrl={item.imageUrl}
+                  model={item.model}
+                  size={item.size}
+                  price={item.price}
+                  nul={item.nul}
+                  addCard={(obj) => onAddCart(obj)} />))} />
+              <Route path='/StoneIsland' element={items.filter(i => i.name === 'Stone Island').map((item) => (
+                <Card
+                  id={item.id}
+                  name={item.name}
+                  imageUrl={item.imageUrl}
+                  model={item.model}
+                  size={item.size}
+                  price={item.price}
+                  nul={item.nul}
+                  addCard={(obj) => onAddCart(obj)} />))} />
 
-            <Route path='/Adidas' element={items.filter(i => i.name === 'Adidas').map((item) => (
-              <Card
-                id={item.id}
-                name={item.name}
-                imageUrl={item.imageUrl}
-                model={item.model}
-                size={item.size}
-                price={item.price}
-                nul={item.nul}
-                addCard={(obj) => onAddCart(obj)} />))} />
+              <Route path='/Adidas' element={items.filter(i => i.name === 'Adidas').map((item) => (
+                <Card
+                  id={item.id}
+                  name={item.name}
+                  imageUrl={item.imageUrl}
+                  model={item.model}
+                  size={item.size}
+                  price={item.price}
+                  nul={item.nul}
+                  addCard={(obj) => onAddCart(obj)} />))} />
 
-            <Route path='/Carhartt' element={items.filter(i => i.name === 'Carhartt').map((item) => (
-              <Card
-                id={item.id}
-                name={item.name}
-                imageUrl={item.imageUrl}
-                model={item.model}
-                size={item.size}
-                price={item.price}
-                nul={item.nul}
-                addCard={(obj) => onAddCart(obj)} />))} />
+              <Route path='/Carhartt' element={items.filter(i => i.name === 'Carhartt').map((item) => (
+                <Card
+                  id={item.id}
+                  name={item.name}
+                  imageUrl={item.imageUrl}
+                  model={item.model}
+                  size={item.size}
+                  price={item.price}
+                  nul={item.nul}
+                  addCard={(obj) => onAddCart(obj)} />))} />
 
-          </Routes>
+            </Routes>
+          </div>
         </div>
       </div>
       <Form />
-    </div>
+    </>
   );
 }
 
